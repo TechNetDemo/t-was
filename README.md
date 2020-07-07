@@ -48,7 +48,7 @@ Image List https://hub.docker.com/r/ibmcom/websphere-traditional/tags
 
 Pull Docker Image
 
-    $ docker pull ibmcom/websphere-traditional:9.0.5.3-ubi8-amd64  # Red Hat Universal Base Image 8 (amd64 only):
+    $ docker pull ibmcom/websphere-traditional:latest
     
     
  List Docker Images on local
