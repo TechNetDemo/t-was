@@ -117,6 +117,14 @@ Hello World App `http://<Host IP / Docker Toolbox VM IP>:7080/sample`
 
 Admin Console `http://<Host IP / Docker Toolbox VM IP>:7060/ibm/console`
 
+Admin Console User: `wsadmin`
+
+Admin Console Password:
+
+	$ docker exec t-was cat /tmp/PASSWORD
+	
+	<Admin Passowrd>
+
 
 ## Operational Process
 
