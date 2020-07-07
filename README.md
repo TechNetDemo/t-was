@@ -73,15 +73,8 @@ Docker Tag represents a specific version of image. It’s not mandatory to speci
 ## Deploy Hello World App Container
 
 Deploy Hello World App with custom Hello World App Image.
-
-As `9060`, `9043`, `9080` and `9443` ports may be occupied, we should publish cotainer port by mapping
-- `7060` (docker host) to `9060` (docker container)
-- `7043` (docker host) to `9043` (docker container)
-- `7080` (docker host) to `9080` (docker container)
-- `7443` (docker host) to `9443` (docker container)
-        
-            
-		$ docker run -d --name t-was -p 7060:9060 -p 7043:9043 -p 7080:9080 -p 7443:9443 t-was/sample:1.0
+           
+	$ docker run -d --name t-was -p 9043:9043 -p 9060:9060 -p 9080:9080 -p 9443:9443 t-was/sample:1.0
   
   
 ## Verification and Monitoring
@@ -113,9 +106,9 @@ Get Docker Toolbox VM IP
 
 ## Visit Hello World App
 
-Hello World App `http://<Host IP / Docker Toolbox VM IP>:7080/sample`
+Hello World App `http://<Host IP / Docker Toolbox VM IP>:9080/sample`
 
-Admin Console `http://<Host IP / Docker Toolbox VM IP>:7060/ibm/console`
+Admin Console `http://<Host IP / Docker Toolbox VM IP>:9060/ibm/console`
 
 Admin Console User: `wsadmin`
 
