@@ -44,11 +44,11 @@ Git Clone t-was Reporsitory
 
 ## Pull T-WAS Image
 
-websphere-liberty - `Ubuntu images with IBM Java`
+Image List https://hub.docker.com/r/ibmcom/websphere-traditional/tags
 
-ibmcom/websphere-liberty - `Red Hat's Universal Base Image with additional java options`  
+Pull Docker Image
 
-    $ docker pull ibmcom/websphere-liberty:latest
+    $ docker pull ibmcom/websphere-traditional:9.0.5.3-ubi8-amd64  # Red Hat Universal Base Image 8 (amd64 only):
     
     
  List Docker Images on local
@@ -67,19 +67,21 @@ Docker Tag represents a specific version of image. It’s not mandatory to speci
 
     docker build -t username/image_name:tag_name .
     
-    $ docker build -t l-was/sample:1.0 .
+    $ docker build -t t-was/sample:1.0 .
     
     
 ## Deploy Hello World App Container
 
 Deploy Hello World App with custom Hello World App Image.
 
-As `9080` and `9443` ports may be occupied, we should publish cotainer port by mapping
-- `6080` (docker host) to `9080` (docker container)
-- `6443` (docker host) to `9443` (docker container)
+As `9060`, `9043`, `9080` and `9443` ports may be occupied, we should publish cotainer port by mapping
+- `7060` (docker host) to `9060` (docker container)
+- `7043` (docker host) to `9043` (docker container)
+- `7080` (docker host) to `9080` (docker container)
+- `7443` (docker host) to `9443` (docker container)
         
             
-		$ docker run -d --name l-was -p 6080:9080 -p 6443:9443 l-was/sample:1.0
+		$ docker run -d --name t-was -p 7060:9060 -p 7043:9043 -p 7080:9080 -p 7443:9443 t-was/sample:1.0
   
   
 ## Verification and Monitoring
@@ -91,12 +93,12 @@ Get Running Docker Container
 
 Check Container by Docker Logs
 
-    $ docker logs l-was --follow
+    $ docker logs t-was --follow
     
 
 Display Running Processes of Container
 
-    $ docker top l-was
+    $ docker top t-was
     
     
 Display Docker Container(s) Resource Usage Statistics
@@ -111,20 +113,22 @@ Get Docker Toolbox VM IP
 
 ## Visit Hello World App
 
-Open Web browser and go to http://<Host IP / Docker Toolbox VM IP>:6080/sample
+Hello World App `http://<Host IP / Docker Toolbox VM IP>:7080/sample`
+
+Admin Console `http://<Host IP / Docker Toolbox VM IP>:7060/ibm/console`
 
 
 ## Operational Process
 
 Stop Hello World Container
 
-    $ docker stop l-was
+    $ docker stop t-was
     
     $ docker ps
     
 Start Hello World Container
 
-    $ docker start l-was
+    $ docker start t-was
     
     $ docker ps
 
@@ -133,15 +137,19 @@ Start Hello World Container
     
 ## Docker Container User Group
 
-user: `1001`
+user: `was`
 
-group: `0`
+group: `root`
 
 ## Exposed Port 
 
-HTTP: `9080`
+Admin Console HTTP: `9060`
 
-HTTPS: `9443`
+Admin Console HTTPS: `9043`
+
+App HTTP: `9080`
+
+App HTTPS: `9443`
 
 
 
