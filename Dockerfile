@@ -7,4 +7,4 @@ FROM ibmcom/websphere-traditional:latest
 COPY --chown=was:0 sample.war /work/app/
 COPY --chown=was:0 install-app.py /work/config/
 
-RUN /work/configure.sh
+#RUN /work/configure.sh
