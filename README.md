@@ -47,6 +47,9 @@ Input the following information and press `Create`
 - Container Port: `9080`
 - Application Name: `hello-world`
 - Name: `hello-world`
+- `Routing`
+- Path: `/sample`
+- Target Port: `9080`
 
 
 ## View Build Logs
@@ -76,8 +79,6 @@ Input the following information and press `Create`
 
 4. Click the link provided on `Routes` section.
 
-
-5. Append the url by `/sample` on web browser.
 
 
 
