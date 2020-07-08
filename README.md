@@ -1,4 +1,4 @@
-# Daytrader Java App on OCP4
+# HelloWorld App with WebSphere Traditional on OCP4
 
 In this lab, we will deploy Hello World App with WebSphere Traidtional on OCP4
 
