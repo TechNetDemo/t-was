@@ -10,7 +10,7 @@ Click `START SENARIO`
 
 Go to `Console` tab
 
-Login as `admin`
+Login as `developer`
 
 
 # Hands on Lab
@@ -23,16 +23,18 @@ Login as `admin`
 
 ## Create Openshift Project
 
+Switch to Developer Portal
+
+Go to `Advanced` > `Projects`
+
 Click `Create Project`
 
 Input the following information and press `Create` 
-- Name: `T-WAS`
-- Display Name: `T-WAS`
+- Name: `t-was`
+- Display Name: `t-was`
 
 
 ## Deploy Hello World from Dockerfile
-
-Switch to Developer Portal
 
 Click `+Add`
 
